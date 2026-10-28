@@ -1,0 +1,22 @@
+{
+    "project": "CropYield AI",
+    "model_type": "Crop-Specific Linear Regression",
+    "features": [
+        "Year"
+    ],
+    "target": "hg_ha_yield",
+    "training_years": [
+        1990,
+        2013
+    ],
+    "crops": [
+        "Potatoes",
+        "Rice, paddy",
+        "Sorghum",
+        "Soybeans",
+        "Sweet potatoes",
+        "Wheat"
+    ],
+    "dataset_rows": 138,
+    "yield_unit": "hg/ha"
+}

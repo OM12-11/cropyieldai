@@ -1,0 +1,404 @@
+:root {
+--green: #247447;
+--green-dark: #173f2b;
+--green-light: #eaf4ed;
+--background: #f6f8f5;
+--text: #1e2d23;
+--muted: #6b786e;
+--border: #dce5dd;
+--white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  }
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+background: var(--background);
+color: var(--text);
+line-height: 1.6;
+}
+
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 22px 8%;
+background: var(--white);
+border-bottom: 1px solid var(--border);
+}
+
+.brand {
+display: flex;
+align-items: center;
+gap: 10px;
+color: var(--text);
+font-size: 19px;
+font-weight: 700;
+text-decoration: none;
+}
+
+.brand-icon {
+display: grid;
+place-items: center;
+width: 38px;
+height: 38px;
+border-radius: 11px;
+background: var(--green);
+color: white;
+font-weight: 700;
+}
+
+.brand strong {
+color: var(--green);
+}
+
+.status {
+display: flex;
+align-items: center;
+gap: 8px;
+color: var(--muted);
+font-size: 13px;
+}
+
+.status-dot {
+width: 8px;
+height: 8px;
+border-radius: 50%;
+background: var(--green);
+}
+
+main {
+width: min(100% - 36px, 1000px);
+margin: 0 auto;
+}
+
+.hero {
+max-width: 680px;
+margin: 68px auto 36px;
+text-align: center;
+}
+
+.eyebrow,
+.section-label {
+color: var(--green);
+font-size: 11px;
+font-weight: 700;
+letter-spacing: 1.5px;
+}
+
+.hero h1 {
+margin: 14px 0;
+font-size: clamp(38px, 6vw, 60px);
+line-height: 1.12;
+letter-spacing: -2px;
+}
+
+.hero h1 span {
+color: var(--green);
+}
+
+.hero > p {
+max-width: 590px;
+margin: 0 auto;
+color: var(--muted);
+font-size: 16px;
+}
+
+.prediction-card {
+max-width: 600px;
+margin: 0 auto;
+padding: 32px;
+background: var(--white);
+border: 1px solid var(--border);
+border-radius: 18px;
+box-shadow: 0 12px 35px rgba(23, 63, 43, 0.06);
+}
+
+.card-heading {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 25px;
+}
+
+.card-heading h2 {
+margin-top: 4px;
+font-size: 23px;
+}
+
+.card-icon {
+display: grid;
+place-items: center;
+width: 44px;
+height: 44px;
+border-radius: 12px;
+background: var(--green-light);
+color: var(--green);
+font-size: 24px;
+}
+
+.form-group {
+margin-bottom: 19px;
+}
+
+.form-group label {
+display: block;
+margin-bottom: 7px;
+font-size: 14px;
+font-weight: 600;
+}
+
+select,
+input {
+width: 100%;
+padding: 13px 14px;
+border: 1px solid var(--border);
+border-radius: 9px;
+background: white;
+color: var(--text);
+font-size: 15px;
+}
+
+select:focus,
+input:focus {
+outline: 2px solid #9bc7a8;
+border-color: var(--green);
+}
+
+button {
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+padding: 15px 17px;
+border: none;
+border-radius: 9px;
+background: var(--green);
+color: white;
+font-size: 15px;
+font-weight: 700;
+cursor: pointer;
+transition: background 0.2s;
+}
+
+button:hover {
+background: var(--green-dark);
+}
+
+button:disabled {
+cursor: not-allowed;
+opacity: 0.65;
+}
+
+.form-note {
+margin-top: 14px;
+color: var(--muted);
+font-size: 12px;
+}
+
+.result {
+margin-top: 25px;
+padding: 23px;
+border: 1px solid #c7dfce;
+border-radius: 12px;
+background: var(--green-light);
+}
+
+.result-crop {
+margin-top: 8px;
+font-weight: 600;
+}
+
+.result-value {
+margin-top: 5px;
+color: var(--green-dark);
+font-size: 34px;
+font-weight: 700;
+overflow-wrap: anywhere;
+}
+
+.result-unit {
+color: var(--muted);
+font-size: 13px;
+}
+
+.error-message {
+margin-top: 18px;
+padding: 13px;
+border: 1px solid #efcaca;
+border-radius: 9px;
+background: #fff1f1;
+color: #a32929;
+font-size: 14px;
+overflow-wrap: anywhere;
+}
+
+.hidden {
+display: none;
+}
+
+.info-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 18px;
+margin: 36px 0;
+}
+
+.info-card {
+padding: 22px;
+border: 1px solid var(--border);
+border-radius: 13px;
+background: var(--white);
+}
+
+.info-number {
+color: var(--green);
+font-size: 12px;
+font-weight: 700;
+}
+
+.info-card h3 {
+margin: 8px 0;
+font-size: 16px;
+}
+
+.info-card p {
+color: var(--muted);
+font-size: 13px;
+}
+
+.notice {
+margin-bottom: 35px;
+padding: 20px;
+border-left: 4px solid var(--green);
+border-radius: 5px;
+background: #edf3ec;
+}
+
+.notice strong {
+font-size: 14px;
+}
+
+.notice p {
+margin-top: 6px;
+color: var(--muted);
+font-size: 13px;
+}
+
+
+footer {
+    padding: 24px;
+    border-top: 1px solid var(--border);
+    background: white;
+    color: var(--muted);
+    text-align: center;
+    font-size: 12px;
+}
+
+/* Historical chart card */
+.history-card {
+    margin: 36px auto;
+    padding: 30px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(23, 63, 43, 0.04);
+}
+
+.history-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 25px;
+}
+
+.history-heading h2 {
+    margin-top: 5px;
+    font-size: 24px;
+}
+
+.history-heading p {
+    margin-top: 5px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.history-badge {
+    padding: 7px 12px;
+    border-radius: 20px;
+    background: var(--green-light);
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.chart-container {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    min-height: 350px;
+    overflow: hidden;
+}
+
+.chart-container canvas {
+    display: block;
+}
+
+.chart-note {
+    margin-top: 16px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.history-message {
+    margin-bottom: 15px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* Responsive layout */
+@media (max-width: 650px) {
+    .navbar {
+        padding: 16px 5%;
+    }
+
+    .status {
+        font-size: 11px;
+    }
+
+    .hero {
+        margin-top: 45px;
+    }
+
+    .prediction-card {
+        padding: 23px;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        letter-spacing: -1px;
+    }
+
+    .history-card {
+        padding: 20px;
+    }
+
+    .history-heading h2 {
+        font-size: 21px;
+    }
+
+    .chart-container {
+        height: 280px;
+        min-height: 280px;
+    }
+}
+
